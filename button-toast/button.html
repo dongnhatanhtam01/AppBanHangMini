@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        height: 100vh;
+        display: flex;
+        /* justify-content: space-around; */
+        /* align-items: center; */
+        /* vertical-align: middle; */
+        flex-direction: column;
+        font-family: "Helvetica Neue";
+    }
+    
+    body>div {
+        margin: auto;
+    }
+    /*BLOCK*/
+    
+    .btn {
+        display: inline-block;
+        /*bo thuoc tinh cua a*/
+        text-decoration: none;
+        /*bo thuoc tinh cua btn button*/
+        outline: none;
+        background-color: transparent;
+        border: none;
+        min-width: 120px;
+        /*dat thuoc tinh co ban*/
+        padding: 12px 48px;
+        border-radius: 50px;
+        color: white;
+        cursor: pointer;
+        /*add keyframe transition*/
+        transition: opacity .2s ease;
+    }
+    
+    .btn:hover {
+        opacity: .8;
+    }
+    
+    .btn+.btn {
+        margin-left: 16px;
+    }
+    /*MODIFIER*/
+    
+    .btn--success {
+        background-color: #71be34
+    }
+    
+    .btn--warn {
+        background-color: #ffb702
+    }
+    
+    .btn--danger {
+        background-color: #ff623d
+    }
+    
+    .btn--disabled {
+        opacity: .5 !important;
+        cursor: default;
+    }
+    
+    .btn--size-s {
+        padding: 8px 32px;
+    }
+    
+    .btn--size-l {
+        padding: 16px 56px;
+    }
+</style>
+
+<body>
+    <div>
+        <button class="btn btn--success btn--disabled" title="NEXT APPROVAL">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--warn" title="OK">OK</button>
+        <button class="btn btn--danger" title="TRY AGAIN">TRY AGAIN</button>
+    </div>
+    <div>
+        <button class="btn btn--size-l  btn--success btn--disabled" title="NEXT APPROVAL">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-l  btn--warn" title="OK">OK</button>
+        <button class="btn btn--size-l  btn--danger" title="TRY AGAIN">TRY AGAIN</button>
+    </div>
+    <div>
+        <button class="btn btn--size-s  btn--success btn--disabled" title="NEXT APPROVAL">GO TO NEXT APPROVAL</button>
+        <button class="btn btn--size-s  btn--warn" title="OK">OK</button>
+        <button class="btn btn--size-s  btn--danger" title="TRY AGAIN">TRY AGAIN</button>
+    </div>
+</body>
+
+</html>
